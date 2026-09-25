@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mana profila lapa</title>
+
+    <!-- Pievienots atsevišķs CSS fails -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 id="galvenais-virsraksts">Kristiāns Štībelis</h1>
+        <p>Mana digitālā profila lapa</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#par-mani">Par mani</a></li>
+            <li><a href="#hobiji">Hobiji</a></li>
+            <li><a href="#kontakti">Kontakti</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="par-mani">
+            <h2>Par mani</h2>
+
+            <p>
+                Mani sauc Kristiāns, un es mācos programmēšanu.
+                Brīvajā laikā man patīk <b class="izcelts">hokejs</b>,
+                automašīnas un datorspēles.
+            </p>
+
+            <img
+                src="https://cdn.discordapp.com/attachments/1411291911188119616/1550411019879448638/image.jpg?ex=6ab776c8&is=6ab62548&hm=961412d0c19a959619148bb7833da1457419ed2b1f2b65caad38f182ee4f00be&"
+                alt="Attēls manā profila lapā"
+                width="300"
+            >
+        </section>
+
+        <section id="hobiji">
+            <h2>Mani hobiji</h2>
+
+            <ul>
+                <li>Hokejs</li>
+                <li>Programmēšana</li>
+                <li>Automašīnas</li>
+                <li>Datorspēles</li>
+            </ul>
+        </section>
+
+        <article class="kartite">
+            <h2>Īss stāsts par mani</h2>
+
+            <p>
+                Hokeju spēlēju kopš četru gadu vecuma.
+                Tas man ir palīdzējis attīstīt disciplīnu,
+                komandas darbu un neatlaidību.
+            </p>
+
+            <p class="izcelts">
+                Mans mērķis ir turpināt pilnveidot savas
+                programmēšanas prasmes.
+            </p>
+        </article>
+
+        <section>
+            <h2>Manas prasmes</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Prasme</th>
+                    <th>Līmenis</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>Vidējs</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Vidējs</td>
+                </tr>
+                <tr>
+                    <td>C++</td>
+                    <td>Pamati</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="javascript">
+            <h2>JavaScript uzdevums</h2>
+
+            <p id="pazinojums">
+                Nospied pogu, lai uzzinātu kaut ko par mani!
+            </p>
+
+            <button type="button" onclick="mainitPazinojumu()">
+                Nospied mani!
+            </button>
+        </section>
+
+        <section id="kontakti">
+            <h2>Sazinies ar mani</h2>
+
+            <form>
+                <label for="name">Vārds:</label><br>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+
+                <label for="email">E-pasts:</label><br>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+
+                <label for="message">Ziņa:</label><br>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    cols="30"
+                    required
+                ></textarea>
+                <br><br>
+
+                <label for="contact">Kā ar mani sazināties?</label><br>
+                <select id="contact" name="contact">
+                    <option>E-pasts</option>
+                    <option>Ziņa</option>
+                    <option>Telefons</option>
+                </select>
+                <br><br>
+
+                <button type="submit">Nosūtīt</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Kristiāns Štībelis | Mana profila lapa</p>
+    </footer>
+
+    <script>
+        function mainitPazinojumu() {
+            const teksts = document.getElementById("pazinojums");
+
+            teksts.textContent =
+                "Man patīk hokejs, automašīnas un programmēšana!";
+
+            teksts.classList.add("izcelts");
+        }
+    </script>
+
+</body>
+</html>

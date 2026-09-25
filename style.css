@@ -1,0 +1,213 @@
+/* 1. Elementa selektors un mantošana */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    background-color: #f0f4f8;
+    margin: 0;
+}
+
+/* 2. Galvenes un kājenes fons */
+header,
+footer {
+    background-color: #1a5fb4;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* 3. Vairāku selektoru apvienošana */
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* 4. ID selektors */
+#galvenais-virsraksts {
+    font-size: 36px;
+    color: white;
+}
+
+/* 5. Navigācijas saišu noformējums */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 6. Navigācijas saišu hover efekts */
+nav a:hover {
+    color: #ffdd57;
+    text-decoration: underline;
+}
+
+/* Navigācijas izkārtojums */
+nav {
+    background-color: #174a82;
+    padding: 12px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+/* 7. Klases selektors — izmantots vairākiem elementiem */
+.izcelts {
+    color: #1a5fb4;
+    font-weight: bold;
+}
+
+/* 8. Formas e-pasta laukam atšķirīgs noformējums */
+input[type="email"] {
+    background-color: #e8f2ff;
+    border: 2px solid #1a5fb4;
+}
+
+/* Vārda laukam savs noformējums */
+input[type="text"] {
+    background-color: white;
+    border: 1px solid #777777;
+}
+
+/* 9. Formas lauku fokuss */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #1a5fb4;
+    outline-offset: 2px;
+}
+
+/* 10. Kaskādes piemērs */
+
+/* Šis noteikums zaudē, jo tam seko tāds pats selektors. */
+h2 {
+    color: #174a82;
+}
+
+/* Uzvar šis noteikums — vienāds specifiskums,
+   bet tas atrodas vēlāk CSS failā. */
+h2 {
+    color: rgb(26, 95, 180);
+}
+
+/* 11. Specifiskuma piemērs */
+
+/* Elementa selektors — vismazākais specifiskums */
+h1 {
+    color: green;
+}
+
+/* Klases selektors — specifiskāks par elementa selektoru */
+.specifiskums {
+    color: orange;
+}
+
+/* ID selektors — specifiskāks par klases un elementa selektoru */
+#galvenais-virsraksts {
+    color: white;
+}
+
+/* ID selektors uzvar, jo tam ir lielāks specifiskums.
+   !important varētu šo secību mainīt, tāpēc to lieto
+   tikai īpašos gadījumos. */
+
+/* 12. Lapas galvenais saturs */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 13. Sekciju apmales, iekšējās un ārējās atstarpes */
+section {
+    border: 2px solid #1a5fb4;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 25px 0;
+    background-color: white;
+}
+
+/* 14. Raksta Box Model uzdevums */
+article.kartite {
+    width: 280px;
+    padding: 15px;
+    border: 4px solid #1a5fb4;
+    border-radius: 12px;
+    margin: 25px 0;
+
+    /* Kopējais platums ar content-box:
+       280 + 15 + 15 + 4 + 4 = 318px. */
+
+    /* Box-sizing: border-box nozīmē, ka 280px
+       ietver saturu, padding un border.
+       Satura platums: 280 - 30 - 8 = 242px. */
+    box-sizing: border-box;
+}
+
+/* 15. Tabulas noformējums */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #777777;
+    text-align: left;
+}
+
+th {
+    background-color: #1a5fb4;
+    color: white;
+}
+
+/* Katra otrā tabulas rinda */
+tr:nth-child(even) {
+    background-color: #e8f2ff;
+}
+
+/* 16. Pogas */
+button {
+    background-color: #1a5fb4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #174a82;
+}
+
+/* 17. Kājene */
+footer {
+    margin-top: 30px;
+}
+
+/* 18. Mobilajām ierīcēm */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    article.kartite {
+        max-width: 100%;
+        width: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
