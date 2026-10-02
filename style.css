@@ -79,6 +79,11 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+.izcelts-teksts {
+    color: #1a5fb4;
+    font-weight: bold;
+}
+
 input[type="email"] {
     background-color: #e8f2ff;
     border: 2px solid #1a5fb4;
