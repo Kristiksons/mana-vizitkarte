@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mana profila lapa</title>
-
-    <!-- Pievienots atsevišķs CSS fails -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -31,7 +29,8 @@
 
             <p>
                 Mani sauc Kristiāns, un es mācos programmēšanu.
-                Brīvajā laikā man patīk <b class="izcelts">hokejs</b>,
+                Brīvajā laikā man patīk
+                <span class="izcelts">hokejs</span>,
                 automašīnas un datorspēles.
             </p>
 
@@ -92,7 +91,7 @@
         </section>
 
         <section id="javascript">
-            <h2>Secret info</h2>
+            <h2>JavaScript uzdevums</h2>
 
             <p id="pazinojums">
                 Nospied pogu, lai uzzinātu kaut ko par mani!
@@ -107,31 +106,21 @@
             <h2>Sazinies ar mani</h2>
 
             <form>
-                <label for="name">Vārds:</label><br>
+                <label for="name">Vārds:</label>
                 <input type="text" id="name" name="name" required>
-                <br><br>
 
-                <label for="email">E-pasts:</label><br>
+                <label for="email">E-pasts:</label>
                 <input type="email" id="email" name="email" required>
-                <br><br>
 
-                <label for="message">Ziņa:</label><br>
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    cols="30"
-                    required
-                ></textarea>
-                <br><br>
+                <label for="message">Ziņa:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-                <label for="contact">Kā ar mani sazināties?</label><br>
+                <label for="contact">Kā ar mani sazināties?</label>
                 <select id="contact" name="contact">
                     <option>E-pasts</option>
                     <option>Ziņa</option>
                     <option>Telefons</option>
                 </select>
-                <br><br>
 
                 <button type="submit">Nosūtīt</button>
             </form>
