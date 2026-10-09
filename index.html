@@ -9,36 +9,44 @@
 
 <body>
 
-    <header>
-        <h1 id="galvenais-virsraksts">Kristiāns Štībelis</h1>
-        <p>Mana digitālā profila lapa</p>
-    </header>
+    <header class="galvene">
+        <div>
+            <h1 id="galvenais-virsraksts">Kristiāns Štībelis</h1>
+            <p>Mana digitālā profila lapa</p>
+        </div>
 
-    <nav>
-        <ul>
-            <li><a href="#par-mani">Par mani</a></li>
-            <li><a href="#hobiji">Hobiji</a></li>
-            <li><a href="#kontakti">Kontakti</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="#par-mani">Par mani</a></li>
+                <li><a href="#hobiji">Hobiji</a></li>
+                <li><a href="#kontakti">Kontakti</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
 
         <section id="par-mani">
             <h2>Par mani</h2>
 
-            <p>
-                Mani sauc Kristiāns, un es mācos programmēšanu.
-                Brīvajā laikā man patīk
-                <span class="izcelts-teksts">hokejs</span>,
-                automašīnas un datorspēles.
-            </p>
+            <article class="vizitkarte">
+                <img
+                    src="https://cdn.discordapp.com/attachments/1411291911188119616/1550411019879448638/image.jpg?ex=6ac0b148&is=6abf5fc8&hm=36f2af9dc62578108fabeec096552c74b11060bdb3ad0774b442cb2fafa6f87f&"
+                    alt="Mans profila attēls"
+                    width="160"
+                >
 
-            <img
-                src="https://cdn.discordapp.com/attachments/1411291911188119616/1550411019879448638/image.jpg?ex=6ac0b148&is=6abf5fc8&hm=36f2af9dc62578108fabeec096552c74b11060bdb3ad0774b442cb2fafa6f87f&"
-                alt="Attēls manā profila lapā"
-                width="300"
-            >
+                <div class="vizitkarte-teksts">
+                    <h3>Kristiāns Štībelis</h3>
+                    <p><strong>Loma:</strong> Programmēšanas students</p>
+                    <p>
+                        Mācos programmēšanu un attīstu savas prasmes.
+                        Brīvajā laikā man patīk hokejs, automašīnas
+                        un datorspēles.
+                    </p>
+                    <a class="poga" href="#kontakti">Sazinies ar mani</a>
+                </div>
+            </article>
         </section>
 
         <section id="hobiji">
@@ -69,8 +77,7 @@
 
         <section>
             <h2>Manas prasmes</h2>
-
-            <table border="1">
+            <table>
                 <tr>
                     <th>Prasme</th>
                     <th>Līmenis</th>
@@ -125,7 +132,7 @@
                 <button type="submit">Nosūtīt</button>
             </form>
         </section>
-
+        
     </main>
 
     <footer>

@@ -13,6 +13,19 @@ footer {
     padding: 25px;
 }
 
+.galvene {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: left;
+}
+
+.galvene p {
+    margin-bottom: 0;
+}
+
 h1,
 h2,
 h3 {
@@ -34,11 +47,8 @@ h2 {
 #galvenais-virsraksts {
     font-size: 36px;
     color: white;
-}
-
-nav {
-    background-color: #174a82;
-    padding: 12px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -46,12 +56,8 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav li {
-    display: inline-block;
+    gap: 12px;
+    justify-content: flex-start;
 }
 
 nav a {
@@ -59,8 +65,8 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    background-color: #1a5fb4;
-    padding: 8px 16px;
+    background-color: #174a82;
+    padding: 8px 12px;
     border-radius: 6px;
 }
 
@@ -72,33 +78,46 @@ nav a:hover {
 .izcelts {
     color: #1a5fb4;
     font-weight: bold;
-    display: inline-block;
-    width: 200px;
-    height: 40px;
-    padding: 5px;
-    box-sizing: border-box;
 }
 
-.izcelts-teksts {
-    color: #1a5fb4;
-    font-weight: bold;
-}
-
-input[type="email"] {
-    background-color: #e8f2ff;
-    border: 2px solid #1a5fb4;
-}
-
-input[type="text"] {
+.vizitkarte {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     background-color: white;
-    border: 1px solid #777777;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-    outline: 3px solid #1a5fb4;
-    outline-offset: 2px;
+.vizitkarte img {
+    width: 160px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.vizitkarte-teksts {
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
+.vizitkarte-teksts h3 {
+    margin-top: 0;
+}
+
+.poga {
+    display: inline-block;
+    background-color: #1a5fb4;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+.poga:hover {
+    background-color: #174a82;
 }
 
 main {
@@ -117,6 +136,7 @@ section {
 
 article.kartite {
     width: 280px;
+    max-width: 100%;
     padding: 15px;
     border: 4px solid #1a5fb4;
     border-radius: 12px;
@@ -158,30 +178,32 @@ button:hover {
     background-color: #174a82;
 }
 
-form label {
-    display: block;
-    margin-bottom: 5px;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
 }
 
 form input,
 form textarea,
 form select {
-    display: block;
-    width: 100%;
-    max-width: 500px;
+
     box-sizing: border-box;
-    margin-bottom: 15px;
+    max-width: 100%;
+    padding: 8px;
+    font: inherit;
 }
 
 form button {
-    display: block;
+    align-self: flex-start;
 }
 
-section img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #1a5fb4;
+    outline-offset: 2px;
 }
 
 footer {
@@ -189,18 +211,30 @@ footer {
 }
 
 @media (max-width: 600px) {
-    nav ul {
+    .galvene {
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        align-items: stretch;
+    }
+
+    .galvene nav ul {
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     main {
         padding: 12px;
     }
 
+    .vizitkarte {
+        flex-wrap: wrap;
+    }
+
+    .vizitkarte-teksts {
+        flex: 1 1 220px;
+    }
+
     article.kartite {
-        max-width: 100%;
+        
         width: auto;
     }
 
