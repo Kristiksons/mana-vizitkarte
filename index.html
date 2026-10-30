@@ -1,52 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mana profila lapa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kristiāna profila lapa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="galvene">
-        <div>
-            <h1 id="galvenais-virsraksts">Kristiāns Štībelis</h1>
-            <p>Mana digitālā profila lapa</p>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="#par-mani">Par mani</a></li>
-                <li><a href="#hobiji">Hobiji</a></li>
-                <li><a href="#kontakti">Kontakti</a></li>
-            </ul>
-        </nav>
+    <header>
+        <h1 id="galvenais-virsraksts">Kristiāns Štībelis</h1>
+        <p>Mana digitālā profila lapa</p>
     </header>
 
-    <main>
+    <nav>
+        <ul>
+            <li><a href="#par-mani">Par mani</a></li>
+            <li><a href="#hobiji">Hobiji</a></li>
+            <li><a href="#prasmes">Prasmes</a></li>
+            <li><a href="#kontakti">Kontakti</a></li>
+        </ul>
+    </nav>
+
+    <main id="galvenais">
 
         <section id="par-mani">
             <h2>Par mani</h2>
 
-            <article class="vizitkarte">
-                <img
-                    src="https://cdn.discordapp.com/attachments/1411291911188119616/1550411019879448638/image.jpg?ex=6ac0b148&is=6abf5fc8&hm=36f2af9dc62578108fabeec096552c74b11060bdb3ad0774b442cb2fafa6f87f&"
-                    alt="Mans profila attēls"
-                    width="160"
-                >
+            <div class="kartite">
+                <p>
+                    Mani sauc Kristiāns, un es mācos programmēšanu.
+                    Brīvajā laikā man patīk <b>hokejs</b>, automašīnas
+                    un datorspēles.
+                </p>
 
-                <div class="vizitkarte-teksts">
-                    <h3>Kristiāns Štībelis</h3>
-                    <p><strong>Loma:</strong> Programmēšanas students</p>
-                    <p>
-                        Mācos programmēšanu un attīstu savas prasmes.
-                        Brīvajā laikā man patīk hokejs, automašīnas
-                        un datorspēles.
-                    </p>
-                    <a class="poga" href="#kontakti">Sazinies ar mani</a>
-                </div>
-            </article>
+                <img class="galerija"
+                     src="https://www.w3schools.com/images/w3schools_green.jpg"
+                     alt="W3Schools mācību vietnes zaļais logo">
+            </div>
         </section>
 
         <section id="hobiji">
@@ -60,7 +53,7 @@
             </ul>
         </section>
 
-        <article class="kartite">
+        <article>
             <h2>Īss stāsts par mani</h2>
 
             <p>
@@ -68,15 +61,11 @@
                 Tas man ir palīdzējis attīstīt disciplīnu,
                 komandas darbu un neatlaidību.
             </p>
-
-            <p class="izcelts">
-                Mans mērķis ir turpināt pilnveidot savas
-                programmēšanas prasmes.
-            </p>
         </article>
 
-        <section>
+        <section id="prasmes">
             <h2>Manas prasmes</h2>
+
             <table>
                 <tr>
                     <th>Prasme</th>
@@ -97,30 +86,18 @@
             </table>
         </section>
 
-        <section id="javascript">
-            <h2>JavaScript uzdevums</h2>
-
-            <p id="pazinojums">
-                Nospied pogu, lai uzzinātu kaut ko par mani!
-            </p>
-
-            <button type="button" onclick="mainitPazinojumu()">
-                Nospied mani!
-            </button>
-        </section>
-
         <section id="kontakti">
             <h2>Sazinies ar mani</h2>
 
             <form>
                 <label for="name">Vārds:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name">
 
                 <label for="email">E-pasts:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
 
                 <label for="message">Ziņa:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5"></textarea>
 
                 <label for="contact">Kā ar mani sazināties?</label>
                 <select id="contact" name="contact">
@@ -132,23 +109,12 @@
                 <button type="submit">Nosūtīt</button>
             </form>
         </section>
-        
+
     </main>
 
     <footer>
         <p>© 2026 Kristiāns Štībelis | Mana profila lapa</p>
     </footer>
-
-    <script>
-        function mainitPazinojumu() {
-            const teksts = document.getElementById("pazinojums");
-
-            teksts.textContent =
-                "Man patīk hokejs, automašīnas un programmēšana!";
-
-            teksts.classList.add("izcelts");
-        }
-    </script>
 
 </body>
 </html>
